@@ -1,4 +1,8 @@
 # AWS Data Engineering Project at PayU
+**Related Articles**
+https://techblog.lazypay.in/big-data-bigger-savings-a-million-dollar-success-story-95fb141431a7
+https://techblog.lazypay.in/unlock-the-power-of-airflow-external-task-sensor-for-any-cron-schedules-b42c34b09fd7
+https://techblog.lazypay.in/revolutionizing-statement-generation-at-lazypay-227c9332eb1d
 
 # In PayU the ETL structure
 # Extract -
@@ -36,3 +40,7 @@ Later we also had another layer of transformations where we performed business l
 trusted_bucket and store the results in the consumer bucket for this also we used Airflow jobs and spark
 for scheduling and transformations.
 # Load -
+
+
+
+
