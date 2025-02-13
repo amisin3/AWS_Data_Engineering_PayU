@@ -34,3 +34,9 @@ Fix:
 Increase MaxFullLoadSubTasks to load multiple tables in parallel.
 Disable indexes & constraints on the target database during migration.
 Use AWS S3 as an intermediate storage for large datasets.
+
+ **Limitations in AWS DMS**
+
+Dropping columns, renaming tables, or changing primary keys are NOT supported automatically.
+DMS only captures schema changes if the target supports it (e.g., RDS, Aurora).
+We need to perform this manually
