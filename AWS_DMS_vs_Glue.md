@@ -18,3 +18,19 @@ Increase table loading threads (MaxFullLoadSubTasks).
 
 Reduce LOB handling (Limited LOB mode for better performance).
 Use Log-Based CDC instead of query-based CDC.
+
+**Common issues faced during DMS Migration?**
+**High Latency in CDC (Change Data Capture)**
+Issue: CDC replication lag increases (CDCLatencySource, CDCLatencyTarget).
+Fix:
+
+Increase replication instance size (r5.xlarge or higher).
+Enable parallel apply (ParallelApplyThreads) for faster writes.
+
+**Full Load Stuck or Slow**
+Issue: Full load is extremely slow or hangs.
+Fix:
+
+Increase MaxFullLoadSubTasks to load multiple tables in parallel.
+Disable indexes & constraints on the target database during migration.
+Use AWS S3 as an intermediate storage for large datasets.
