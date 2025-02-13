@@ -7,3 +7,14 @@ cost-effective for this use case.
 ✅ Automated Schema Conversion – DMS automatically handles schema mapping, reducing manual effort in migrations.
 ✅ No-Code Managed Service – Unlike AWS Data Pipeline, which requires more manual setup, AWS DMS is a fully managed service with built-in fault tolerance and 
 monitoring.
+
+**Taking care of Large dataset migration using AWS DMS?**
+Use Parallel Full Load & CDC (Change Data Capture) Efficiently
+✔ Enable Parallel Load:
+
+Use multiple replication tasks instead of a single task to distribute load.
+Increase table loading threads (MaxFullLoadSubTasks).
+✔ Optimize CDC:
+
+Reduce LOB handling (Limited LOB mode for better performance).
+Use Log-Based CDC instead of query-based CDC.
