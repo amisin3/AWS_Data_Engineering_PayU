@@ -22,6 +22,18 @@ Columnar storage allows efficient compression and fast column-based queries.
 Each column chunk is further divided into pages.
 Pages store actual data and metadata (e.g., encoding and dictionary compression).
 
+**We used Snappy Compression Technique because it is faster and used for real-time application and big data processing**
+ Snappy (Google Snappy)
+✔ Compression Type: Fast, block-based compression.
+✔ Compression Ratio: Lower than Gzip (~20-30% reduction).
+✔ Speed: Extremely fast (low CPU usage).
+✔ Best For: Real-time applications, big data processing (Hadoop, Spark, Kafka, Parquet).
+✔ Use Cases:
+
+High-speed big data processing (Apache Parquet, ORC, Avro).
+Streaming services (Kafka, Flume).
+Distributed storage (Google Bigtable, RocksDB).
+
 **Advantages of Parquet**
 ✔ Columnar Storage → Faster queries on selected columns.
 ✔ Efficient Compression → Uses encoding (e.g., Snappy, Gzip) to reduce file size.
