@@ -40,3 +40,11 @@ Use AWS S3 as an intermediate storage for large datasets.
 Dropping columns, renaming tables, or changing primary keys are NOT supported automatically.
 DMS only captures schema changes if the target supports it (e.g., RDS, Aurora).
 We need to perform this manually
+
+ **How do you ensure data consistency between source and target? (Checksum, validation scripts, logs)?**
+ Use AWS DMS Data Validation (Automatic Checksum)
+✔ Enable Data Validation in DMS tasks to automatically compare:
+
+Row counts
+Checksums (hash values) of data
+Primary key mismatches
