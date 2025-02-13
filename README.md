@@ -15,11 +15,11 @@ layer) using AWS DMS (Full_Load+CDC) (Realtime Sync) (No transformations was per
 **Source Databases** - SQL (MySQL), NoSQL (MongoDB)
 **Migration Engine** - AWS DMS (Full_Load + CDC (binary log, oplog)) written in Terraform
 **Target Databases** - AWS S3 (Transient_bucket or Bronze Layer)
-**Fault Tolerance** - 
+**Fault Tolerance** - AWS DMS, S3 takes care by using checksum
 **Syncing of Data** - Realtime
-**Througput** - 
-**Challenges faced** - 
-**Cost for migrating one tables**
+**Throughput** - 
+**Challenges faced** - Mentioned in the AWS DMS
+**Cost for migrating one tables** - 
 **Format of targeted files** - Parquet
 
 # Transform -
