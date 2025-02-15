@@ -28,6 +28,31 @@ Eg- txt, csv, json, xml
 1. ORC (Optimized Row Columnar)
 - Compression works really well here
 - Provides a predicate pushdown
+- Structure of ORC - 
+a. Header - 'ORC'
+b. Body - It is made up of strips
+c. Tail - 2 parts - i. File Footer ii. PostScript
+Stripes are further divided into block of records by default 10K rows and make it as row group.
 2. Parquet
+- Very good for handling nested data
+- Stores the metadata at the end of the file
+- Supports schema evolution
+- Total there are 3 parts - 
+a. Header - "par1"
+b. Row Group - contains column chuncks
+c. Tails - Contains 3 parts 
+i. File metadata
+ii. Footer - Length of metadata
+iii. magic number - par1
+- default compression is snappy
+
+--- Hive Compression Techniques - 
+1. Snappy (Fast compression, Not good compression)
+2. LZO (Fast compression, not good compression, splitable)
+3. gzip (slow compression, good compression, non-splitable)
+4. bzip2 (slow compression, good compression, splitable)
+
+Note - Some compression are optimized for storage. However some compression are optimized for speed.
+
 
 
