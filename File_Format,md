@@ -1,1 +1,33 @@
+How to choose between different file formats - 
+1. Faster reads
+2. Faster writes
+3. Splitable (Most important features needed for parallelism)
+4. Schema evolution support (Adding or removing the columns from the existing file)
+5. Advanced compression (row based are bad for compression and column based are good for compression)
+6. Most compatible platform
+7. Predicate Pushdown is a query optimization technique used in databases and data processing engines (like Apache Spark, Apache Hive, and others) to improve 
+query performance by pushing filtering conditions (predicates) closer to the data source. This reduces the amount of data that needs to be read and processed, 
+leading to faster query execution.
+
+All the file formats are divided into 2 broad categories - 
+1. Row based (writing is easy)
+2. Column based (faster reads)
+
+-- Text File Fomrat 
+Not to be used in production
+Eg- txt, csv, json, xml
+
+-- Row based file format
+1. Avro
+- Schema is stored in json
+- Actual data is stored in a binary format
+- Best file format for schema evolution
+- Best for write heavy task
+
+-- Column based file format
+1. ORC (Optimized Row Columnar)
+- Compression works really well here
+- Provides a predicate pushdown
+2. Parquet
+
 
