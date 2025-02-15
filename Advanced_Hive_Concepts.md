@@ -1,1 +1,2 @@
-
+**Advanced Hive Concepts**
+**Vectorization**
